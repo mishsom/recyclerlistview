@@ -398,7 +398,7 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
                 layoutManager.relayoutFromIndex(newProps.dataProvider.getFirstIndexToProcessInternal(), newProps.dataProvider.getSize());
                 this._virtualRenderer.refresh();
             }
-        } else if (this._relayoutReqIndex >= 0) {
+        } else if (this._relayoutReqIndex > 0) {
             const layoutManager = this._virtualRenderer.getLayoutManager();
             if (layoutManager) {
                 const dataProviderSize = newProps.dataProvider.getSize();
